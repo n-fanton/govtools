@@ -40,9 +40,9 @@ use_code_of_conduct <- function(pkg = ".", email = NULL) {
 
 # License files ----------------------------------------------------------------
 
-#' @importFrom devtools use_mit_license
+#' @importFrom usethis use_mit_license
 #' @export
-devtools::use_mit_license
+usethis::use_mit_license
 
 #' Add an OGL-3 license
 #'
@@ -77,7 +77,7 @@ use_template <- function(template, save_as = template, data = list(),
   pkg <- devtools:::as.package(pkg)
 
   path <- file.path(pkg$path, save_as)
-  if (!devtools:::can_overwrite(path)) {
+  if (!usethis:::can_overwrite(path)) {
     stop("`", save_as, "` already exists.", call. = FALSE)
   }
 
@@ -90,7 +90,7 @@ use_template <- function(template, save_as = template, data = list(),
 
   if (ignore) {
     message("* Adding `", save_as, "` to `.Rbuildignore`.")
-    devtools:::use_build_ignore(save_as, pkg = pkg)
+    usethis:::use_build_ignore(save_as, pkg = pkg)
   }
 
   if (open) {
@@ -100,3 +100,4 @@ use_template <- function(template, save_as = template, data = list(),
 
   invisible(TRUE)
 }
+

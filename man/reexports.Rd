@@ -11,6 +11,6 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{devtools}{\code{\link[devtools]{use_mit_license}}}
+  \item{usethis}{\code{\link[usethis:licenses]{use_mit_license}}}
 }}
 
